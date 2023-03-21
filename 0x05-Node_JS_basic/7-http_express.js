@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const countStudents = async (path) => {
   try {
-    const csvData = await fs.promises.readFile(path, {encoding: 'utf8'});
+    const csvData = await fs.promises.readFile(path, { encoding: 'utf8' });
     const fields = {};
     const dataShow = {};
     let data = csvData.toString().split('\n');
@@ -37,9 +37,8 @@ const app = express();
 const port = 1245;
 
 app.get('/', (req, res) => {
-    res.send('Hello Holberton School!');
+  res.send('Hello Holberton School!');
 });
-
 
 app.get('/students', (req, res) => {
   res.write('This is the list of our students\n');
