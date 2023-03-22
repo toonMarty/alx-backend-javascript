@@ -27,7 +27,7 @@ const readDatabase = (path) => new Promise((resolve, reject) => {
           const list = fields[field];
           dataShow[field] = {
             list: `List: ${list.toString().replace(/,/g, ', ')}`,
-            number: list.length
+            number: list.length,
           };
         }
       }
